@@ -4,7 +4,7 @@
     ViewData["Title"] = "List";
 }
 
-<h2>Restuarants</h2>
+<h2>Restaurants</h2>
 
 <form method="get">
     <div class="form-group">
@@ -34,6 +34,16 @@
             </td>
             <td>
                 @restaurant.Cuisine
+            </td>
+            <td>
+                <a class="btn btn-lg" asp-page="./Detail" asp-route-restaurantId="@restaurant.Id">
+                    <i class="glyphicon glyphicon-zoom-in"></i>
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-lg" asp-page="./Edit" asp-route-restaurantId="@restaurant.Id">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </a>
             </td>
         </tr>
     }
