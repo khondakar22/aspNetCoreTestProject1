@@ -44,7 +44,9 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
+        
         <footer>
+            @RenderSection("footer", required:false)
             <p>&copy; 2019 - OdeToFood</p>
         </footer>
     </div>
